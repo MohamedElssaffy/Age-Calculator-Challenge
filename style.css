@@ -1,0 +1,181 @@
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+/* Using fonts from local file */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Reset Padding & Margin */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--neutral-light-grey);
+  font-family: 'Poppins';
+}
+
+/* Custom input style */
+input {
+  border: 1px solid var(--neutral-off-white);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+input:invalid {
+  border-color: var(--primary-light-red);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  background-color: var(--neutral-white);
+  border-radius: 1rem;
+  border-bottom-right-radius: 5rem;
+  padding: 1.5rem;
+  margin: 3rem auto;
+  width: 85vw;
+}
+
+form {
+  border-bottom: 1px solid var(--neutral-off-white);
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  min-height: 10rem;
+  font-weight: bold;
+  > div {
+    width: calc(100% / 3);
+    label {
+      color: var(--neutral-smokey-grey);
+    }
+    input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+  input[type='image'] {
+    background-color: var(--primary-purple);
+    color: var(--neutral-off-black);
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+    transition: 0.5s background-color, 0.5s border-color;
+    -webkit-transition: 0.5s background-color, 0.5s border-color;
+    -moz-transition: 0.5s background-color, 0.5s border-color;
+    -ms-transition: 0.5s background-color, 0.5s border-color;
+    -o-transition: 0.5s background-color, 0.5s border-color;
+  }
+  input[type='image']:hover {
+    background-color: var(--neutral-off-black);
+    border-color: var(--neutral-off-black);
+  }
+}
+@media (min-width: 767px) {
+  form {
+    width: 95%;
+    gap: 1rem;
+    > div {
+      width: calc(100% / 4);
+    }
+    input {
+      font-size: 2rem;
+    }
+    input[type='image'] {
+      right: 0;
+      left: auto;
+      transform: translate(50%, 50%);
+      -webkit-transform: translate(50%, 50%);
+      -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+      -o-transform: translate(50%, 50%);
+    }
+  }
+}
+
+.result {
+  width: 100%;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bolder;
+  margin-top: 1.5rem;
+  p {
+    color: var(--neutral-off-black);
+    span {
+      color: var(--primary-purple);
+    }
+  }
+}
