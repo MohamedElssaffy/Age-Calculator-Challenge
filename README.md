@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [Git Repo](https://github.com/MohamedElssaffy/Age-Calculator-Challenge)
+- Live Site URL: [Go Live](https://mohamedelssaffy.github.io/Age-Calculator-Challenge/)
 
 ## My process
 
